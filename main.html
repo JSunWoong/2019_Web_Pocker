@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Poker</title>
+    <link href="css/table.css" rel="stylesheet"/>
+    <link href="css/deck.css" rel="stylesheet"/>
+    <link href="css/user_info.css" rel="stylesheet"/>
+    <link href="css/card.css" rel="stylesheet"/>
+    <link href="css/score_table_elements.css" rel="stylesheet"/>
+    <script src="js/judge.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/game.js"></script>
+</head>
+<body>
+<h1 style="text-align: center">Web Poker 2019-1</h1>
+<center>
+    <div id="main_table">
+        <div id="poker_table">
+            <div id="other_1" class="other_deck">
+                <div id="user1_card_1" class="card other_card user1_cards concealable"></div>
+                <div id="user1_card_2" class="card other_card user1_cards concealable"></div>
+                <div id="user1_card_3" class="card other_card user1_cards"></div>
+                <div id="user1_card_4" class="card other_card user1_cards"></div>
+                <div id="user1_card_5" class="card other_card user1_cards"></div>
+                <img class="other_user_img" src="images/nbr.png"/>
+                <div class="other_user_info"> 이름 : <span id="user1_name">너부리</span><br>
+                    머니 : &#8361;<span id="user1_money">0</span></div>
+            </div>
+            <div id="other_2" class="other_deck">
+                <div id="user2_card_1" class="card other_card user2_cards concealable"></div>
+                <div id="user2_card_2" class="card other_card user2_cards concealable"></div>
+                <div id="user2_card_3" class="card other_card user2_cards"></div>
+                <div id="user2_card_4" class="card other_card user2_cards"></div>
+                <div id="user2_card_5" class="card other_card user2_cards"></div>
+                <img class="other_user_img" src="images/poro.png"/>
+                <div class="other_user_info"> 이름 : <span id="user2_name">포로리</span><br>
+                    머니 : &#8361;<span id="user2_money">0</span></div>
+            </div>
+            <div id="total_batting_table">
+                <img src="images/chips1.png" width="100px" height="100px"/>
+                &#8361;<span id="total_batting_money">0</span>
+            </div>
+            <div id="other_3" class="other_deck">
+                <div id="user3_card_1" class="card other_card user3_cards concealable"></div>
+                <div id="user3_card_2" class="card other_card user3_cards concealable"></div>
+                <div id="user3_card_3" class="card other_card user3_cards"></div>
+                <div id="user3_card_4" class="card other_card user3_cards"></div>
+                <div id="user3_card_5" class="card other_card user3_cards"></div>
+                <img class="other_user_img" src="images/ya.png"/>
+                <div class="other_user_info"> 이름 : <span id="user3_name">야옹이형</span><br>
+                    머니 : &#8361;<span id="user3_money">0</span></div>
+            </div>
+            <div id="my_deck">
+                <div id="my_card_1" class="card my_card"></div>
+                <div id="my_card_2" class="card my_card"></div>
+                <div id="my_card_3" class="card my_card"></div>
+                <div id="my_card_4" class="card my_card"></div>
+                <div id="my_card_5" class="card my_card"></div>
+                <img class="my_img" src="images/user_1.png"/>
+                <div id="my_name_info" class="my_info"> 이름 : <span id="user0_name"></span><br>머니 : &#8361;<span id="user0_money">0</span></div>
+                <div id="my_win_lose_info" class="my_info"> WIN : <span id="win_cnt">0</span><br>
+                    LOSE : <span id="lose_cnt">0</span></div>
+            </div>
+        </div>
+
+        <div id="score_table">
+            <input type="button" id="bt_start" class="button bt_start_or_stop" value="게임 시작" onclick="start_game(true)"/>
+            <hr>
+            <input type="button" id="bt_batting" class="button batting_or_die_button" value="배팅" onclick="go(true)"/>
+            <input type="button" id="bt_die" class="button batting_or_die_button" value="다이" onclick="go(false)"/>
+            <div id="score_board">
+                RESULT
+                <div id="result_text">
+                    id=result_text
+                </div>
+                <input type="button" id="bt_confirm" class="button" value="확인" onclick="reGame()" disabled/>
+            </div>
+            <hr>
+            <input type="button" id="bt_stop" class="button bt_start_or_stop" value="게임 종료" onclick="exit_game(false)"/>
+        </div>
+
+    </div>
+</center>
+</body>
+</html>
